@@ -1,0 +1,87 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #10131a;
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+    color: #e8e8e8;
+    user-select: none;
+}
+
+#app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#game {
+    display: block;
+    background: #1a1f2b;
+    border: 3px solid #2a3446;
+    border-radius: 4px;
+    box-shadow: 0 0 80px rgba(80, 140, 255, 0.25);
+    image-rendering: pixelated;
+}
+
+#overlay {
+    position: absolute;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+    background: rgba(10, 15, 25, 0.85);
+    backdrop-filter: blur(4px);
+    z-index: 10;
+}
+
+#overlay.visible { display: flex; }
+
+#overlay h1 {
+    font-size: 56px;
+    letter-spacing: 12px;
+    color: #6cf;
+    text-shadow: 0 0 20px rgba(100, 200, 255, 0.7);
+}
+
+#overlay h2 {
+    font-size: 32px;
+    letter-spacing: 6px;
+    color: #fc6;
+}
+
+#overlay p {
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: 0.75;
+    text-align: center;
+}
+
+#overlay button {
+    padding: 14px 40px;
+    font-size: 16px;
+    font-family: inherit;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #4a7bff, #2a4dbf);
+    color: #fff;
+    border: 2px solid #6cf;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#overlay button:hover { transform: scale(1.05); }
+#overlay kbd {
+    background: #2a3446;
+    padding: 2px 8px;
+    border-radius: 3px;
+    border: 1px solid #4a5568;
+    font-size: 13px;
+}

@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.base.json",
+
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+
+    "types": ["vite/client"],
+
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+    "baseUrl": ".",
+
+    "paths": {
+      "@/*": ["src/*"],
+      "@core/*": ["src/core/*"],
+      "@entities/*": ["src/entities/*"],
+      "@levels/*": ["src/levels/*"]
+    }
+  },
+
+  "include": ["src"]
+}
